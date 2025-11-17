@@ -38,19 +38,88 @@ TODO: List and describe the actors/users for this product.
     - View pubs, nightclubs and bars in the area
 
 ### Use Cases
-TODO: Describe each use case (at least one per team member).
-    Give each use case a unique ID, e.g. UC1, UC2, ...
-    Summarise these using the use-case template below.
 
 | TODO: USE-CASE ID e.g. UC1, UC2, ... | TODO: USE-CASE NAME | 
 | -------------------------------------- | ------------------- |
 | **Description** | TODO: Goal to be achieved by use case and sources for requirement |
 | **Actors** | TODO: List of actors involved in use case |
-| **Assumptions** | TODO: Pre/post-conditions if any</td></tr>
+| **Assumptions** | TODO: Pre/post-conditions if any |
 | **Steps** | TODO: Interactions between actors and system necessary to achieve goal |
 | **Variations** | TODO: OPTIONAL - Any variations in the steps of a use case |
 | **Non-functional** | TODO: OPTIONAL - List of non-functional requirements that the use case must meet. |
 | **Issues** | TODO: OPTIONAL - List of issues that remain to be resolved |
+
+| USE-CASE 1 | Business Stat Analysis | Tyler |
+| -------------------------------------- | ------------------- |
+| **Description** | View total times a venue has been used in a crawl |
+| **Actors** | Businesses, Admins/ Engineers |
+| **Assumptions** | Business/ Admin has login setup to access data |
+| **Steps** | 1. Get business data from venue database; 2. View statistics page |
+| **Variations** |  |
+| **Non-functional** | Should run on a variety of devices and browsers |
+| **Issues** |  |
+
+| USE-CASE 2 | Business Info Update | Tyler |
+| -------------------------------------- | ------------------- |
+| **Description** | Update business information on the site to keep users up to date with events and other info |
+| **Actors** | Businesses, Admins/ Engineers |
+| **Assumptions** | Business/ Admin has login setup to access data |
+| **Steps** | 1. Get business data from venue database; 2. View statistics page; 3. Accept user input; 4. Append data to venue database |
+| **Variations** |  |
+| **Non-functional** | Should run on a variety of devices and browsers |
+| **Issues** |  |
+
+| USE-CASE 3 | App Usage Stats | Tyler |
+| -------------------------------------- | ------------------- |
+| **Description** | View information regarding the amount of crawls generated, how many users there are, etc. |
+| **Actors** | Admins/ Engineers |
+| **Assumptions** | Admin has login setup to access data |
+| **Steps** | 1. Get usage data from venues database; 2. View statistics page |
+| **Variations** |  |
+| **Non-functional** | Should run on a variety of devices and browsers |
+| **Issues** |  |
+
+| USE-CASE 4 | Business Account Setup | Tyler |
+| -------------------------------------- | ------------------- |
+| **Description** | Provide businesses with a unique login so they can access relevant information |
+| **Actors** | Admins/ Engineers |
+| **Assumptions** | Admin has login setup to access data; Each business already has unique login generated and stored in a database, waiting to be activated |
+| **Steps** | 1. Get searched business' login info from login database; 2. View single-use login credentials |
+| **Variations** | 1. Business is not found in database (could be new) |
+| **Non-functional** | Should run on a variety of devices and browsers |
+| **Issues** |  |
+
+| USE-CASE 5 | View Local Venues | Connor |
+| -------------------------------------- | ------------------- |
+| **Description** | TODO: Goal to be achieved by use case and sources for requirement |
+| **Actors** | New Residents, Existing Residents |
+| **Assumptions** | TODO: Pre/post-conditions if any |
+| **Steps** | TODO: Interactions between actors and system necessary to achieve goal |
+| **Variations** | TODO: OPTIONAL - Any variations in the steps of a use case |
+| **Non-functional** | TODO: OPTIONAL - List of non-functional requirements that the use case must meet. |
+| **Issues** | TODO: OPTIONAL - List of issues that remain to be resolved |
+
+| USE-CASE 6 | Generate Pub Crawl | Connor |
+| -------------------------------------- | ------------------- |
+| **Description** | TODO: Goal to be achieved by use case and sources for requirement |
+| **Actors** | New Residents |
+| **Assumptions** | TODO: Pre/post-conditions if any |
+| **Steps** | TODO: Interactions between actors and system necessary to achieve goal |
+| **Variations** | TODO: OPTIONAL - Any variations in the steps of a use case |
+| **Non-functional** | TODO: OPTIONAL - List of non-functional requirements that the use case must meet. |
+| **Issues** | TODO: OPTIONAL - List of issues that remain to be resolved |
+
+| USE-CASE 7 | Activity Generator | Connor |
+| -------------------------------------- | ------------------- |
+| **Description** | TODO: Goal to be achieved by use case and sources for requirement |
+| **Actors** | Existing Residents |
+| **Assumptions** | TODO: Pre/post-conditions if any |
+| **Steps** | TODO: Interactions between actors and system necessary to achieve goal |
+| **Variations** | TODO: OPTIONAL - Any variations in the steps of a use case |
+| **Non-functional** | TODO: OPTIONAL - List of non-functional requirements that the use case must meet. |
+| **Issues** | TODO: OPTIONAL - List of issues that remain to be resolved |
+
+
 
 
 TODO: Your Use-Case diagram should include all use-cases.

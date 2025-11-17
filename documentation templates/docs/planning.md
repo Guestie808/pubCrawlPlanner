@@ -63,6 +63,7 @@ Pub Crawl Planner
 - Laws involving drinking must be emphasised
 - If maps are inaccurate, user could end up lost
 - Login information must be secure, if not data could be prone to breach
+- Data (such as route data, personal info, etc) must be given permission to be stored/ shared with businesses as if not, it could breach data protection act
 
 ## Project Scope // should be clear and include all relevant actors
 TODO: Scope of the System of Interest. Include a bullet list of things from your context diagram that are in scope.
