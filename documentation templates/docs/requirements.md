@@ -89,37 +89,45 @@ TODO: List and describe the actors/users for this product.
 | **Non-functional** | Should run on a variety of devices and browsers |
 | **Issues** |  |
 
-| USE-CASE 5 | View Local Venues | Connor |
+| USE-CASE 5 | Creat User Login | Connor |
 | -------------------------------------- | ------------------- |
-| **Description** | TODO: Goal to be achieved by use case and sources for requirement |
-| **Actors** | New Residents, Existing Residents |
-| **Assumptions** | TODO: Pre/post-conditions if any |
-| **Steps** | TODO: Interactions between actors and system necessary to achieve goal |
-| **Variations** | TODO: OPTIONAL - Any variations in the steps of a use case |
-| **Non-functional** | TODO: OPTIONAL - List of non-functional requirements that the use case must meet. |
-| **Issues** | TODO: OPTIONAL - List of issues that remain to be resolved |
+| **Description** | |
+| **Actors** | |
+| **Assumptions** | |
+| **Steps** | |
+| **Variations** | |
+| **Non-functional** | |
+| **Issues** | |
 
-| USE-CASE 6 | Generate Pub Crawl | Connor |
+| USE-CASE 6 | View Local Venues | Connor |
 | -------------------------------------- | ------------------- |
-| **Description** | TODO: Goal to be achieved by use case and sources for requirement |
-| **Actors** | New Residents |
-| **Assumptions** | TODO: Pre/post-conditions if any |
-| **Steps** | TODO: Interactions between actors and system necessary to achieve goal |
-| **Variations** | TODO: OPTIONAL - Any variations in the steps of a use case |
-| **Non-functional** | TODO: OPTIONAL - List of non-functional requirements that the use case must meet. |
-| **Issues** | TODO: OPTIONAL - List of issues that remain to be resolved |
+| **Description** | |
+| **Actors** | |
+| **Assumptions** | |
+| **Steps** | |
+| **Variations** | |
+| **Non-functional** | |
+| **Issues** | |
 
-| USE-CASE 7 | Activity Generator | Connor |
+| USE-CASE 7 | Generate Pub Crawl | Connor |
 | -------------------------------------- | ------------------- |
-| **Description** | TODO: Goal to be achieved by use case and sources for requirement |
-| **Actors** | Existing Residents |
-| **Assumptions** | TODO: Pre/post-conditions if any |
-| **Steps** | TODO: Interactions between actors and system necessary to achieve goal |
-| **Variations** | TODO: OPTIONAL - Any variations in the steps of a use case |
-| **Non-functional** | TODO: OPTIONAL - List of non-functional requirements that the use case must meet. |
-| **Issues** | TODO: OPTIONAL - List of issues that remain to be resolved |
+| **Description** | |
+| **Actors** | |
+| **Assumptions** | |
+| **Steps** | |
+| **Variations** | |
+| **Non-functional** | |
+| **Issues** | |
 
-
+| USE-CASE 8 | Activity Generator | Connor |
+| -------------------------------------- | ------------------- |
+| **Description** | |
+| **Actors** | |
+| **Assumptions** | |
+| **Steps** | |
+| **Variations** | |
+| **Non-functional** | |
+| **Issues** | |
 
 
 TODO: Your Use-Case diagram should include all use-cases.
@@ -133,9 +141,22 @@ TODO: create a list of functional requirements.
     Give each functional requirement a unique ID. e.g. FR1, FR2, ...
     Indicate which UC the requirement comes from.
 
+    | Tyler |
+
+    FR1 - The system shall store venue statistics and allow for later access by businesses. - UC1
+    FR2 - The system shall allow businesses to access and update their information on the site. - UC2
+    FR3 - The system shall store app usage statistics and allow for later access by admins. - UC3
+    FR4 - The system shall allow admins to approve/ create logins for requesting businesses. - UC4
+    FR5 - The system shall store user login info - UC4, UC5
+
+    | Connor |
 
 ### Non-Functional Requirements
 TODO: Consider one or more [quality attributes](https://en.wikipedia.org/wiki/ISO/IEC_9126) to suggest a small number of non-functional requirements.
 Give each non-functional requirement a unique ID. e.g. NFR1, NFR2, ...
 
 Indicate which UC the requirement comes from.
+
+    | Tyler |
+
+    | Connor |
