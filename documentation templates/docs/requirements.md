@@ -159,4 +159,8 @@ Indicate which UC the requirement comes from.
 
     | Tyler |
 
+    NFR1 - Accuracy: The system should store and provide accurate readings on venue statistics to businesses. - UC1
+    NFR2 - Usability: The system should have an easy to use interface for businesses and admins to access information. - UC1, UC3
+    NFR3 - Installability: The system should allow for easy business account setup by admins. - UC4
+
     | Connor |
