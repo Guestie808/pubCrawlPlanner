@@ -49,7 +49,7 @@ TODO: List and describe the actors/users for this product.
 | **Non-functional** | TODO: OPTIONAL - List of non-functional requirements that the use case must meet. |
 | **Issues** | TODO: OPTIONAL - List of issues that remain to be resolved |
 
-| USE-CASE 1 | Business Stat Analysis | Tyler |
+| USE-CASE 1 | Business Stat Analysis - Tyler |
 | -------------------------------------- | ------------------- |
 | **Description** | View total times a venue has been used in a crawl |
 | **Actors** | Businesses, Admins/ Engineers |
@@ -59,7 +59,7 @@ TODO: List and describe the actors/users for this product.
 | **Non-functional** | Should run on a variety of devices and browsers |
 | **Issues** |  |
 
-| USE-CASE 2 | Business Info Update | Tyler |
+| USE-CASE 2 | Business Info Update - Tyler | 
 | -------------------------------------- | ------------------- |
 | **Description** | Update business information on the site to keep users up to date with events and other info |
 | **Actors** | Businesses, Admins/ Engineers |
@@ -69,7 +69,7 @@ TODO: List and describe the actors/users for this product.
 | **Non-functional** | Should run on a variety of devices and browsers |
 | **Issues** |  |
 
-| USE-CASE 3 | App Usage Stats | Tyler |
+| USE-CASE 3 | App Usage Stats - Tyler |
 | -------------------------------------- | ------------------- |
 | **Description** | View information regarding the amount of crawls generated, how many users there are, etc. |
 | **Actors** | Admins/ Engineers |
@@ -79,7 +79,7 @@ TODO: List and describe the actors/users for this product.
 | **Non-functional** | Should run on a variety of devices and browsers |
 | **Issues** |  |
 
-| USE-CASE 4 | Business Account Setup | Tyler |
+| USE-CASE 4 | Business Account Setup - Tyler |
 | -------------------------------------- | ------------------- |
 | **Description** | Provide businesses with a unique login so they can access relevant information |
 | **Actors** | Admins/ Engineers |
@@ -89,22 +89,17 @@ TODO: List and describe the actors/users for this product.
 | **Non-functional** | Should run on a variety of devices and browsers |
 | **Issues** |  |
 
-| USE-CASE 5 | Create User Login | Connor |
+| USE-CASE 5 | Create User Login - Connor |
 | -------------------------------------- | ------------------- |
 | **Description** | Describes how new users can create a their own account to loign. this can be used to access personalised features for their pub crawls. Some examples include: saving routes, showing a history of past pub crawls/routes  |
 | **Actors** | Exsisting Bristol residents and new Bristol residents |
 | **Assumptions** | 1.The servers are online and can easily store new users and their data securely 2.Users can easily access login page 3. the user has a valid email address |
-| **Steps** |  1. User goes to 'Sign up' page to make an account
-            |  2. The user enters the details that the system requires like email and password
-            |  3. The system checks if the email has already been used
-            |  4. The system stores the users credentials in the database, confirming account creation
-            |  5. The user can now login
-
+| **Steps** |  1. User goes to 'Sign up' page to make an account 2. The user enters the details that the system requires like email and password  3. The system checks if the email has already been used  4. The system stores the users credentials in the database, confirming account creation  5. The user can now login |
 | **Variations** |  |
 | **Non-functional** | |
 | **Issues** | |
 
-| USE-CASE 6 | View Local Venues | Connor |
+| USE-CASE 6 | View Local Venues - Connor |
 | -------------------------------------- | ------------------- |
 | **Description** | |
 | **Actors** | |
@@ -114,7 +109,7 @@ TODO: List and describe the actors/users for this product.
 | **Non-functional** | |
 | **Issues** | |
 
-| USE-CASE 7 | Generate Pub Crawl | Connor |
+| USE-CASE 7 | Generate Pub Crawl - Connor |
 | -------------------------------------- | ------------------- |
 | **Description** | |
 | **Actors** | |
@@ -124,7 +119,7 @@ TODO: List and describe the actors/users for this product.
 | **Non-functional** | |
 | **Issues** | |
 
-| USE-CASE 8 | Activity Generator | Connor |
+| USE-CASE 8 | Activity Generator - Connor |
 | -------------------------------------- | ------------------- |
 | **Description** | |
 | **Actors** | |
