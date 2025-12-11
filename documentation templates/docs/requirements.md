@@ -95,8 +95,8 @@ TODO: List and describe the actors/users for this product.
 | **Actors** | Exsisting Bristol residents and new Bristol residents |
 | **Assumptions** | 1.The servers are online and can easily store new users and their data securely 2.Users can easily access login page 3. the user has a valid email address |
 | **Steps** |  1. User goes to 'Sign up' page to make an account , 2. The user enters the details that the system requires like email and password , 3. The system checks if the email has already been used , 4. The system stores the users credentials in the database, confirming account creation , 5. The user can now login |
-| **Variations** |  |
-| **Non-functional** | |
+| **Variations** | 1. Email already in use, 2. Missing fields (like filling out the email but not a password) |
+| **Non-functional** |  |
 | **Issues** | |
 
 | USE-CASE 6 | View Local Venues - Connor |
