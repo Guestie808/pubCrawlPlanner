@@ -55,7 +55,7 @@ TODO: List and describe the actors/users for this product.
 | **Actors** | Businesses, Admins/ Engineers |
 | **Assumptions** | Business/ Admin has login setup to access data |
 | **Steps** | 1. Get business data from venue database; 2. View statistics page |
-| **Variations** |  |
+| **Variations** | 1. Not logged into a business account |
 | **Non-functional** | Should run on a variety of devices and browsers |
 | **Issues** |  |
 
@@ -75,19 +75,19 @@ TODO: List and describe the actors/users for this product.
 | **Actors** | Admins/ Engineers |
 | **Assumptions** | Admin has login setup to access data |
 | **Steps** | 1. Get usage data from venues database; 2. View statistics page |
-| **Variations** |  |
+| **Variations** | 1. Not logged into an admin account |
 | **Non-functional** | Should run on a variety of devices and browsers |
 | **Issues** |  |
 
 | USE-CASE 4 | Business Account Setup - Tyler |
 | -------------------------------------- | ------------------- |
 | **Description** | Provide businesses with a unique login so they can access relevant information |
-| **Actors** | Admins/ Engineers |
-| **Assumptions** | Admin has login setup to access data; Each business already has unique login generated and stored in a database, waiting to be activated |
+| **Actors** | Businesses, Admins/ Engineers |
+| **Assumptions** | Admin has login setup to access data; Each business already has unique login generated and stored in a database, waiting to be activated on businesses request |
 | **Steps** | 1. Get searched business' login info from login database; 2. View single-use login credentials |
 | **Variations** | 1. Business is not found in database (could be new) |
 | **Non-functional** | Should run on a variety of devices and browsers |
-| **Issues** |  |
+| **Issues** | Relies on admin to complete setup which could delay account being sorted |
 
 | USE-CASE 5 | Create User Login - Connor |
 | -------------------------------------- | ------------------- |

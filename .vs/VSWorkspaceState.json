@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\documentation templates",
-    "\\documentation templates\\docs"
+    "\\documentation templates\\docs",
+    "\\documentation templates\\docs\\images"
   ],
-  "SelectedNode": "\\documentation templates\\docs\\design.md",
+  "SelectedNode": "\\documentation templates\\docs\\images\\wireframe.png",
   "PreviewInSolutionExplorer": false
 }
