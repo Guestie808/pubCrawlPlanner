@@ -73,6 +73,16 @@ easily tackled.
 ## Project Scope // should be clear and include all relevant actors
 TODO: Scope of the System of Interest. Include a bullet list of things from your context diagram that are in scope.
 
-- 
+- OpenData Bristol Platform
+- App Hosting
+- Businesses
+- Shortest distance algorithm to plot routes
+- New Bristol Residents
+- HTML/ Javascript Technology
+- Desktop and Mobile friendly
+- Exisiting Bristol Residents
+- Venue Viewer
+- Acitivity Generator
+- Admins/ Engineers
 
 ![Insert your Context Diagram Here](images/context.png)
