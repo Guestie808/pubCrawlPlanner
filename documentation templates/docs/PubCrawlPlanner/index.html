@@ -42,24 +42,24 @@
                 }
             }
     
-            function filter(type) {
-                let enc = encodeURIComponent(type);
+            function filter(type) { // shows fields with direct match to input type
+                let enc = encodeURIComponent(type); // used to pass in the input value into the url query
                 let url = `https://maps2.bristol.gov.uk/server2/rest/services/ext/ll_leisure_and_culture/MapServer/14/query?where=TYPE_OF_PREMISE%20%3D%20'${enc}'&outFields=MAPEAST,MAPNORTH,TYPE_OF_PREMISE,TRADING_NAME,TRADING_ADDRESS,BUSINESS_CONTACT&outSR=4326&f=json`;
                 fetch(url).then(r=>r.json()).then(outputTable)
             }
     
-            function like(type) {
+            function like(type) { // shows fields with partial match to input type
                 let enc = encodeURIComponent(type);
                 let url = `https://maps2.bristol.gov.uk/server2/rest/services/ext/ll_leisure_and_culture/MapServer/14/query?where=TYPE_OF_PREMISE%20%LIKE%20'${enc}'&outFields=MAPEAST,MAPNORTH,TYPE_OF_PREMISE,TRADING_NAME,TRADING_ADDRESS,BUSINESS_CONTACT&outSR=4326&f=json`;
                 fetch(url).then(r=>r.json()).then(outputTable)
             }
     
-            function query() {
+            function query() { // shows all fields
                 let url = "https://maps2.bristol.gov.uk/server2/rest/services/ext/ll_leisure_and_culture/MapServer/14/query?where=1%3D1&outFields=MAPEAST,MAPNORTH,TYPE_OF_PREMISE,TRADING_NAME,TRADING_ADDRESS,BUSINESS_CONTACT&outSR=4326&f=json"
                 fetch(url).then(r=>r.json()).then(outputTable)
             }
     
-            function search(searchTerm) {
+            function search(searchTerm) { // shows fields with partial match to search input
                 let enc = encodeURIComponent(searchTerm);
                 let url = `https://maps2.bristol.gov.uk/server2/rest/services/ext/ll_leisure_and_culture/MapServer/14/query?where=&text=${enc}&outFields=*&f=json`;
                 fetch(url).then(r=>r.json()).then(outputTable)
@@ -87,8 +87,8 @@
             <header class="gold padded gold-gradient">
                 <span class="title">Pub Quest - Filter Local Venues</span>
                 <form id="search" action="index.html" class="nav-bar">
-                    <input name="searchterm" type="text" placeholder="Search..." style="background-color: rgb(148, 148, 148);">
-                    <button type="submit" style="background-color: grey;"><i class="material-icons">search</i></button>
+                    <input name="searchterm" type="text" placeholder="Search..." class="search-bar">
+                    <button type="submit" class="search-button"><i class="material-icons">search</i></button>
                 </form>
             </header>
             <nav class="nav-bar">

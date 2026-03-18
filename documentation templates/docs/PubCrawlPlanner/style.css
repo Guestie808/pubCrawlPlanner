@@ -77,6 +77,7 @@ margin-bottom: 10px;
     font-family: 'SuperPixel', sans-serif;
     font-size: 16px;
     margin: 10px;
+    min-width: 160px; /* set a min width to ensure text stays within the buttons on diff screen sizes */
 }
 
 .nav-button:hover {
@@ -99,4 +100,20 @@ th {
 table, td{
     border-collapse: collapse;
     border: 1px solid black;
+}
+
+.search-button {
+    background-color: grey;
+    color: black
+}
+
+.search-button:hover {
+    background-color: black;
+    color: white;
+}
+
+.search-bar {
+    font-family: 'SuperPixel', sans-serif;
+    font-size: 14px;
+    background-color: rgb(148, 148, 148);
 }
