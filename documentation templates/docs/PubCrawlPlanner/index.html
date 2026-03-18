@@ -20,21 +20,16 @@
                     e.appendChild(tr);
     
                     let a = f[i].attributes;
+                    
+                    tr.dataset.mapeast = a.MAPEAST; // store coords as hidden attributes as users dont need access, but required for path finding later
+                    tr.dataset.mapnorth = a.MAPNORTH;
     
                     let td = document.createElement("td");
-                    td.innerHTML = a.MAPEAST;
-                    tr.appendChild(td);
-    
-                    td = document.createElement("td");
-                    td.innerHTML = a.MAPNORTH;
+                    td.innerHTML = a.TRADING_NAME;
                     tr.appendChild(td);
 
                     td = document.createElement("td");
                     td.innerHTML = a.TYPE_OF_PREMISE;
-                    tr.appendChild(td);
-
-                    td = document.createElement("td");
-                    td.innerHTML = a.TRADING_NAME;
                     tr.appendChild(td);
 
                     td = document.createElement("td");
@@ -92,8 +87,8 @@
             <header class="gold padded gold-gradient">
                 <span class="title">Pub Quest - Filter Local Venues</span>
                 <form id="search" action="index.html" class="nav-bar">
-                    <input name="searchterm" type="text" placeholder="Search...">
-                    <button type="submit"><i class="material-icons">search</i></button>
+                    <input name="searchterm" type="text" placeholder="Search..." style="background-color: rgb(148, 148, 148);">
+                    <button type="submit" style="background-color: grey;"><i class="material-icons">search</i></button>
                 </form>
             </header>
             <nav class="nav-bar">
@@ -108,7 +103,7 @@
                     <button class="gold-gradient nav-button" onclick="filter('Wine Bar')">Wine Bars</button>
                 </div>
                 <table>
-                    <thead><th>Map1</th><th>Map2</th><th>Type</th><th>Name</th><th>Address</th><th>Contact</th></thead>
+                    <thead><th>Name</th><th>Type</th><th>Address</th><th>Contact</th></thead>
                     <tbody id="results"></tbody>
                 </table>
             </main>
