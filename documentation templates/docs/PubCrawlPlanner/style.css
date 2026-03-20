@@ -5,6 +5,8 @@
     'n m m m '
     'n m m m ';
     grid-template-columns: 1fr 2fr 2fr 2fr; /* 1/7 for nav, 6/7 for main */
+    grid-template-rows: auto 6fr 6fr; 
+    min-height: 100vh; /* viewport height makes sure grid always perfectly fits screen */
 }
 header {
     grid-area:h; 
@@ -27,7 +29,7 @@ main {
  
 .title { 
     font-weight: bold; 
-    font-size: 22pt; 
+    font-size: 42pt; 
     font-family: 'SuperPixel', sans-serif; /* Using custom font, but using sans-serif as backup */
 } 
  
