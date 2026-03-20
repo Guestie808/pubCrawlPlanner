@@ -11,24 +11,25 @@
         <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
         crossorigin=""></script>
+        <script src="common.js"></script>
     
     </head>
  
     <body>
         <div class="grid-container">
-            <header class="gold padded gold-gradient">
+            <header class="gold-gradient">
                 <span class="title">Pub Quest - View Local Venues</span>
                 <form id="search" action="index.html" class="nav-bar">
                     <input name="searchterm" type="text" placeholder="Search..." class="search-bar">
-                    <button type="submit" class="search-button"><i class="material-icons">search</i></button>
+                    <button type="submit" class="search-button"></button>
                 </form>
             </header>
-            <nav class="nav-bar">
-                <button class="gold-gradient nav-button" style="width: fit-content;">View Local Venues</button>
-                <button onclick="location.href='index.html'" class="gold-gradient nav-button" style="width: fit-content;">Filter Local Venues</button>
+            <nav class="nav-column">
+                <button class="gold-gradient nav-button" onclick="location.href='index.html'"style="width: 100%;"><span class="label">Filter Local Venues</span></button>
+                <button class="gold-gradient nav-button" onclick="location.href='map.html'" style="width: 100%;"><span class="label">View Local Venues</span></button>
             </nav>
             <main>
-                <div id="map"><img src = "images/map-border.png" alt="Overlay" id="map-overlay"></div>
+                <div id="map"><img src = "" alt="Overlay" id="map-overlay"></div>
             </main>
         </div>
 

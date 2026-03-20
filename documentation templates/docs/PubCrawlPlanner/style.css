@@ -77,19 +77,35 @@ margin-bottom: 10px;
     height: 50px;
     font-family: 'SuperPixel', sans-serif;
     font-size: 16px;
-    min-width: 160px; /* set a min width to ensure text stays within the buttons on diff screen sizes */
+    min-width: 230px; /* set a min width to ensure text stays within the buttons on diff screen sizes */
     margin-right: 10px;
     margin-bottom: 10px;
+    background-color: transparent;
+    background-image: url('images/buttonUp.png');
+    background-size: 100% 100%;
+    background-position: center;
+    border: none;
+    padding-bottom: 7px; /* ensures buttons are central on custom background image, rather than button itself */
 }
 
 .nav-button:active {
-    background: #808080;
-    color: white;
+    background-image: url('images/buttonDown.png');
+}
+
+.nav-button .label {
+    display: inline-block; /* allows transform to shift text inside button for enhanced click effect */
+}
+
+.nav-button:active .label{
+    transform: translateY(2px); /* performs translation when button is clicked */
 }
 
 .nav-button.active { /* active class for filter buttons for setActive function in index.js */
-    background: #808080;
-    color: white;
+    background-image: url('images/buttonDown.png');
+}
+
+.nav-button.active .label{
+    transform: translateY(2px); /* maintains tranformed text position while active */
 }
 
 .nav-bar {
@@ -119,17 +135,33 @@ table, td{
 }
 
 .search-button {
-    background-color: grey;
-    color: black
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    background-color: transparent;
+    background-image: url("images/searchButtonUp.png");
+    background-size: 100% 100%;
+    background-position: center;
+    border: none;
 }
 
-.search-button:hover {
-    background-color: black;
-    color: white;
+.search-button:active {
+    background-image: url("images/searchButtonDown.png");
 }
 
 .search-bar {
     font-family: 'SuperPixel', sans-serif;
     font-size: 14px;
-    background-color: rgb(148, 148, 148);
+    background-color: transparent;
+    background-image: url("images/searchBar.png");
+    background-size: 100% 100%;
+    border: none;
+    padding-left: 10px;
+    padding-top: 7px;
+    height: 50px;
+}
+
+span {
+    font-family: 'SuperPixel', sans-serif;
+    font-size: 16px;
 }

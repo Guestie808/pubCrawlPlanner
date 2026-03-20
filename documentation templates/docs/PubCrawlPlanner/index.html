@@ -6,29 +6,29 @@
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-        <script src="index.js"> // calls script early so it loads earlier
-        </script> 
+        <script src="index.js"> // calls script early so it loads earlier</script> 
+        <script src="common.js"></script>
     </head>
     
     <body>
         <div class="grid-container">
-            <header class="gold padded gold-gradient">
+            <header class="gold-gradient">
                 <span class="title">Pub Quest - Filter Local Venues</span>
                 <form id="search" action="index.html" class="nav-bar">
                     <input name="searchterm" type="text" placeholder="Search..." class="search-bar">
-                    <button type="submit" class="search-button"><i class="material-icons">search</i></button>
+                    <button type="submit" class="search-button"></button>
                 </form>
             </header>
             <nav class="nav-column">
-                <button class="gold-gradient nav-button" onclick="getLocation('map.html')" style="width: 100%">View Local Venues</button>
-                <button class="gold-gradient nav-button" onclick="location.href='index.html'" style="width: 100%">Filter Local Venues</button>
+                <button class="gold-gradient nav-button" onclick="getLocation('index.html');" style="width: 100%"><span class="label">Filter Local Venues</span></button>
+                <button class="gold-gradient nav-button" onclick="getLocation('map.html');" style="width: 100%"><span class="label">View Local Venues</span></button>
             </nav>
             <main>
                 <div class="nav-bar">
-                    <button class = "gold-gradient nav-button" onclick="setActive(this); filter('Cafe Bar')">Cafe Bars</button>
-                    <button class="gold-gradient nav-button" onclick="setActive(this); filter('Nightclub')">Nightclubs</button>
-                    <button class="gold-gradient nav-button" onclick="setActive(this); filter('Public House')">Pubs</button>
-                    <button class="gold-gradient nav-button" onclick="setActive(this); filter('Wine Bar')">Wine Bars</button>
+                    <button class="gold-gradient nav-button" onclick="setBarActive(this); filter('Cafe Bar')"><span class="label">Cafe Bars</span></button>
+                    <button class="gold-gradient nav-button" onclick="setBarActive(this); filter('Nightclub')"><span class="label">Nightclubs</span></button>
+                    <button class="gold-gradient nav-button" onclick="setBarActive(this); filter('Public House')"><span class="label">Pubs</span></button>
+                    <button class="gold-gradient nav-button" onclick="setBarActive(this); filter('Wine Bar')"><span class="label">Wine Bars</span></button>
                 </div>
                 <table>
                     <thead><th>Name</th><th>Type</th><th>Address</th><th>Contact</th></thead>

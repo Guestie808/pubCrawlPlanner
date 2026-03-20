@@ -44,14 +44,14 @@ function like(type) { // shows fields with partial match to input type
 function query() { // shows all fields
     let url = "https://maps2.bristol.gov.uk/server2/rest/services/ext/ll_leisure_and_culture/MapServer/14/query?where=1%3D1&outFields=MAPEAST,MAPNORTH,TYPE_OF_PREMISE,TRADING_NAME,TRADING_ADDRESS,BUSINESS_CONTACT&outSR=4326&f=json"
     fetch(url).then(r=>r.json()).then(outputTable);
-    document.querySelectorAll('.nav-button').forEach(btn => btn.classList.remove('active'));
+    document.querySelectorAll('.nav-bar .nav-button').forEach(btn => btn.classList.remove('active'));
 }
 
 function search(searchTerm) { // shows fields with partial match to search input
     let enc = encodeURIComponent(searchTerm);
     let url = `https://maps2.bristol.gov.uk/server2/rest/services/ext/ll_leisure_and_culture/MapServer/14/query?where=&text=${enc}&outFields=*&f=json`;
     fetch(url).then(r=>r.json()).then(outputTable);
-    document.querySelectorAll('.nav-button').forEach(btn => btn.classList.remove('active'));
+    document.querySelectorAll('.nav-bar .nav-button').forEach(btn => btn.classList.remove('active'));
 }
 
 // Request user geolocation and callback with lat, lon
@@ -68,8 +68,8 @@ function getLocation(page) {
     }
 }
 
-function setActive(button) {
-    document.querySelectorAll('.nav-button').forEach(btn => btn.classList.remove('active'));
+function setBarActive(button) {
+    document.querySelectorAll('.nav-bar .nav-button').forEach(btn => btn.classList.remove('active'));
     button.classList.add('active');
 }
 
