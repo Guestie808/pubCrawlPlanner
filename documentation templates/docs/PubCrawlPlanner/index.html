@@ -4,82 +4,10 @@
         <title>Pub Quest - Filter Local Venues</title>
 
         <link rel="stylesheet" href="style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700;900&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-        <script>
-            function outputTable(json) {
-                let e = document.getElementById("results");
-                e.innerHTML = "";
-                let f = json.features;
-                for(let i=0;i<f.length;i++) {
-                    let tr = document.createElement("tr");
-                    e.appendChild(tr);
-    
-                    let a = f[i].attributes;
-                    
-                    tr.dataset.mapeast = a.MAPEAST; // store coords as hidden attributes as users dont need access, but required for path finding later
-                    tr.dataset.mapnorth = a.MAPNORTH;
-    
-                    let td = document.createElement("td");
-                    td.innerHTML = a.TRADING_NAME;
-                    tr.appendChild(td);
-
-                    td = document.createElement("td");
-                    td.innerHTML = a.TYPE_OF_PREMISE;
-                    tr.appendChild(td);
-
-                    td = document.createElement("td");
-                    td.innerHTML = a.TRADING_ADDRESS;
-                    tr.appendChild(td);
-
-                    td = document.createElement("td");
-                    td.innerHTML = a.BUSINESS_CONTACT;
-                    tr.appendChild(td);
-                }
-            }
-    
-            function filter(type) { // shows fields with direct match to input type
-                let enc = encodeURIComponent(type); // used to pass in the input value into the url query
-                let url = `https://maps2.bristol.gov.uk/server2/rest/services/ext/ll_leisure_and_culture/MapServer/14/query?where=TYPE_OF_PREMISE%20%3D%20'${enc}'&outFields=MAPEAST,MAPNORTH,TYPE_OF_PREMISE,TRADING_NAME,TRADING_ADDRESS,BUSINESS_CONTACT&outSR=4326&f=json`;
-                fetch(url).then(r=>r.json()).then(outputTable)
-            }
-    
-            function like(type) { // shows fields with partial match to input type
-                let enc = encodeURIComponent(type);
-                let url = `https://maps2.bristol.gov.uk/server2/rest/services/ext/ll_leisure_and_culture/MapServer/14/query?where=TYPE_OF_PREMISE%20%LIKE%20'${enc}'&outFields=MAPEAST,MAPNORTH,TYPE_OF_PREMISE,TRADING_NAME,TRADING_ADDRESS,BUSINESS_CONTACT&outSR=4326&f=json`;
-                fetch(url).then(r=>r.json()).then(outputTable)
-            }
-    
-            function query() { // shows all fields
-                let url = "https://maps2.bristol.gov.uk/server2/rest/services/ext/ll_leisure_and_culture/MapServer/14/query?where=1%3D1&outFields=MAPEAST,MAPNORTH,TYPE_OF_PREMISE,TRADING_NAME,TRADING_ADDRESS,BUSINESS_CONTACT&outSR=4326&f=json"
-                fetch(url).then(r=>r.json()).then(outputTable)
-            }
-    
-            function search(searchTerm) { // shows fields with partial match to search input
-                let enc = encodeURIComponent(searchTerm);
-                let url = `https://maps2.bristol.gov.uk/server2/rest/services/ext/ll_leisure_and_culture/MapServer/14/query?where=&text=${enc}&outFields=*&f=json`;
-                fetch(url).then(r=>r.json()).then(outputTable)
-            }
-    
-            // Request user geolocation and callback with lat, lon
-            function getLocation(page) {
-                if (navigator.geolocation) {
-                    navigator.geolocation.getCurrentPosition( // permission granted, denied - location defaults to central Bristol
-                        loc => window.location.href=`${page}?lat=${loc.coords.latitude}&lon=${loc.coords.longitude}`,
-                        () => window.location.href=`${page}?lat=51.454514&lon=-2.587910`
-                    )
-                }
-                else { // if unsupported feature, location defaults to central Bristol
-                    window.alert("Geolocation is not supported by this browser.");
-                    window.location.href=`${page}?lat=51.454514&lon=-2.587910`;
-                }
-            }
-    
-        </script>
+        <script src="index.js"> // calls script early so it loads earlier
+        </script> 
     </head>
     
     <body>
@@ -91,16 +19,16 @@
                     <button type="submit" class="search-button"><i class="material-icons">search</i></button>
                 </form>
             </header>
-            <nav class="nav-bar">
-                <button class="gold-gradient nav-button" onclick="getLocation('map.html')" style="width: 50%;">View Local Venues</button>
-                <button class="gold-gradient nav-button" onclick="location.href='index.html'" style="width: 50%;">Filter Local Venues</button>
+            <nav class="nav-column">
+                <button class="gold-gradient nav-button" onclick="getLocation('map.html')" style="width: 100%">View Local Venues</button>
+                <button class="gold-gradient nav-button" onclick="location.href='index.html'" style="width: 100%">Filter Local Venues</button>
             </nav>
             <main>
                 <div class="nav-bar">
-                    <button class = "gold-gradient nav-button" onclick="filter('Cafe Bar')">Cafe Bars</button>
-                    <button class="gold-gradient nav-button" onclick="filter('Nightclub')">Nightclubs</button>
-                    <button class="gold-gradient nav-button" onclick="filter('Public House')">Pubs</button>
-                    <button class="gold-gradient nav-button" onclick="filter('Wine Bar')">Wine Bars</button>
+                    <button class = "gold-gradient nav-button" onclick="setActive(this); filter('Cafe Bar')">Cafe Bars</button>
+                    <button class="gold-gradient nav-button" onclick="setActive(this); filter('Nightclub')">Nightclubs</button>
+                    <button class="gold-gradient nav-button" onclick="setActive(this); filter('Public House')">Pubs</button>
+                    <button class="gold-gradient nav-button" onclick="setActive(this); filter('Wine Bar')">Wine Bars</button>
                 </div>
                 <table>
                     <thead><th>Name</th><th>Type</th><th>Address</th><th>Contact</th></thead>
@@ -108,7 +36,8 @@
                 </table>
             </main>
         </div>
-        <script>
+        
+        <script> // leaving this script in the body to ensure rest of script from the js file has loaded first
             var urlParams = new URLSearchParams(location.search);
             var searchTerm = urlParams.get('searchterm');
             if (searchTerm) search(searchTerm);

@@ -4,10 +4,6 @@
         <title>Pub Quest - View Local Venues</title>
 
         <link rel="stylesheet" href="style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700;900&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin>
@@ -15,24 +11,7 @@
         <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
         crossorigin=""></script>
-        
-        <script>
-            function outputMarkers(json) {
-                let f = json.features;
-                for(let i=0;i<f.length;i++) {
-                    let a = f[i].attributes;
-                    let lon = f[i].geometry.x;
-                    let lat = f[i].geometry.y;
-                    let marker = L.marker([lat,lon]).addTo(map);
-                    marker.bindPopup(`<b>${a.TRADING_NAME}</b><br>${a.TYPE_OF_PREMISE}`);
-                }
-            }
     
-            function mapQuery() {
-                let url = "https://maps2.bristol.gov.uk/server2/rest/services/ext/ll_leisure_and_culture/MapServer/14/query?where=1%3D1&outFields=MAPEAST,MAPNORTH,TYPE_OF_PREMISE,TRADING_NAME,TRADING_ADDRESS,BUSINESS_CONTACT&outSR=4326&f=json"
-                fetch(url).then(r=>r.json()).then(outputMarkers);
-            }
-        </script>
     </head>
  
     <body>
@@ -45,31 +24,16 @@
                 </form>
             </header>
             <nav class="nav-bar">
-                <button class="gold-gradient nav-button" style="width: 50%;">View Local Venues</button>
-                <button onclick="location.href='index.html'" class="gold-gradient nav-button" style="width: 50%;">Filter Local Venues</button>
+                <button class="gold-gradient nav-button" style="width: fit-content;">View Local Venues</button>
+                <button onclick="location.href='index.html'" class="gold-gradient nav-button" style="width: fit-content;">Filter Local Venues</button>
             </nav>
             <main>
-                <div id="map"><img src = "images/map-border.png" alt="Overlay" class="map-overlay"></div>
+                <div id="map"><img src = "images/map-border.png" alt="Overlay" id="map-overlay"></div>
             </main>
         </div>
 
-        <script>
-            var urlParams = new URLSearchParams(location.search);
-            var lat = urlParams.get('lat') || 51.4545;
-            var lon = urlParams.get('lon') || -2.5879;
+        <script src="map.js"></script>
 
-            // see: https://leafletjs.com/examples/quick-start/
-    
-            // L for Leaflet - initialize the map centred on user or Bristol, zoom level 13
-            var map = L.map('map').setView([lat,lon], 13);
-    
-            // attribution legally required by the OpenStreetMap license
-            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            }).addTo(map);
-    
-            mapQuery();
-        </script>
     </body>
     
 </html>

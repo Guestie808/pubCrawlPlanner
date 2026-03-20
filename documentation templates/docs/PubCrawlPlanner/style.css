@@ -3,7 +3,8 @@
     grid-template-areas:
     'h h h h '
     'n m m m '
-    'n m m m '
+    'n m m m ';
+    grid-template-columns: 1fr 2fr 2fr 2fr; /* 1/7 for nav, 6/7 for main */
 }
 header {
     grid-area:h; 
@@ -39,7 +40,7 @@ margin-top: 10px;
 margin-bottom: 10px;
 }
 
-.map-overlay {
+#map-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -76,17 +77,32 @@ margin-bottom: 10px;
     height: 50px;
     font-family: 'SuperPixel', sans-serif;
     font-size: 16px;
-    margin: 10px;
     min-width: 160px; /* set a min width to ensure text stays within the buttons on diff screen sizes */
+    margin-right: 10px;
+    margin-bottom: 10px;
 }
 
-.nav-button:hover {
+.nav-button:active {
     background: #808080;
-    color: black;
+    color: white;
+}
+
+.nav-button.active { /* active class for filter buttons for setActive function in index.js */
+    background: #808080;
+    color: white;
 }
 
 .nav-bar {
     display: flex; /*converts to flex container, automatically aligning items*/;
+    flex-direction: row;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.nav-column {
+    display: flex;
+    flex-direction: column; /* stack buttons vertically rather than horizontally */
+    padding: 10px;
 }
 
 th {
