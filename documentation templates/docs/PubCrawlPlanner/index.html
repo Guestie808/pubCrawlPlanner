@@ -1,7 +1,7 @@
 <html>
 
     <head>
-        <title>Pub Quest - Filter Local Venues</title>
+        <title>Pub Quest</title>
 
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -20,15 +20,16 @@
                 </form>
             </header>
             <nav class="nav-column">
-                <button class="gold-gradient nav-button" onclick="getLocation('index.html');" style="width: 100%"><span class="label">Filter Local Venues</span></button>
-                <button class="gold-gradient nav-button" onclick="getLocation('map.html');" style="width: 100%"><span class="label">View Local Venues</span></button>
+                <button class="nav-button active" style="width: 100%"><span class="label">Filter Local Venues</span></button>
+                <button class="nav-button" onclick="getLocation('map.html'); setColumnActive(this)" style="width: 100%"><span class="label">View Local Venues</span></button>
+                <button class="nav-button" onclick="getLocation('plan.html'); setColumnActive(this)" style="width: 100%"><span class="label">Plan A Crawl</span></button>
             </nav>
             <main>
                 <div class="nav-bar">
-                    <button class="gold-gradient nav-button" onclick="setBarActive(this); filter('Cafe Bar')"><span class="label">Cafe Bars</span></button>
-                    <button class="gold-gradient nav-button" onclick="setBarActive(this); filter('Nightclub')"><span class="label">Nightclubs</span></button>
-                    <button class="gold-gradient nav-button" onclick="setBarActive(this); filter('Public House')"><span class="label">Pubs</span></button>
-                    <button class="gold-gradient nav-button" onclick="setBarActive(this); filter('Wine Bar')"><span class="label">Wine Bars</span></button>
+                    <button class="nav-button" onclick="setBarActive(this); filter('Cafe Bar')"><span class="label">Cafe Bars</span></button>
+                    <button class="nav-button" onclick="setBarActive(this); filter('Nightclub')"><span class="label">Nightclubs</span></button>
+                    <button class="nav-button" onclick="setBarActive(this); filter('Public House')"><span class="label">Pubs</span></button>
+                    <button class="nav-button" onclick="setBarActive(this); filter('Wine Bar')"><span class="label">Wine Bars</span></button>
                 </div>
                 <table>
                     <thead><th>Name</th><th>Type</th><th>Address</th><th>Contact</th></thead>

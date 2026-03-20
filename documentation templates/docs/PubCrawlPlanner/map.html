@@ -1,7 +1,7 @@
 <html>
 
     <head>
-        <title>Pub Quest - View Local Venues</title>
+        <title>Pub quest</title>
 
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -25,8 +25,9 @@
                 </form>
             </header>
             <nav class="nav-column">
-                <button class="gold-gradient nav-button" onclick="location.href='index.html'"style="width: 100%;"><span class="label">Filter Local Venues</span></button>
-                <button class="gold-gradient nav-button" onclick="location.href='map.html'" style="width: 100%;"><span class="label">View Local Venues</span></button>
+                <button class="nav-button" onclick="location.href='index.html'; setColumnActive(this)" style="width: 100%;"><span class="label">Filter Local Venues</span></button>
+                <button class="nav-button active" style="width: 100%;"><span class="label">View Local Venues</span></button>
+                <button class="nav-button" onclick="getLocation('plan.html'); setColumnActive(this)" style="width: 100%"><span class="label">Plan A Crawl</span></button>
             </nav>
             <main>
                 <div id="map"><img src = "" alt="Overlay" id="map-overlay"></div>
