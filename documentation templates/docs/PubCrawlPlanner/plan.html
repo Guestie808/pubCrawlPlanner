@@ -2,6 +2,7 @@
 
     <head>
         <title>Pub Quest</title>
+        <link rel="icon" type="image/png" href="images/pubQuestLogoBlack.png">
 
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -12,16 +13,16 @@
     <body>
         <div class="grid-container">
             <header class="gold-gradient">
-                <span class="title">Pub Quest</span>
-                <form id="search" action="index.html" class="nav-bar">
+                <span class="title"><img src="images/pubQuestLogoBlack.png" alt="Pub Quest Logo" class="logo">Pub Quest</span>
+                <form id="search" action="filter.html" class="nav-bar">
                     <input name="searchterm" type="text" placeholder="Search..." class="search-bar">
                     <button type="submit" class="search-button"></button>
                 </form>
             </header>
             <nav class="nav-column">
-                <button class="nav-button" onclick="location.href='index.html'; setColumnActive(this)" style="width: 100%"><span class="label">Filter Local Venues</span></button>
-                <button class="nav-button" onclick="getLocation('map.html'); setColumnActive(this)" style="width: 100%"><span class="label">View Local Venues</span></button>
-                <button class="nav-button active" style="width: 100%"><span class="label">Plan A Crawl</span></button>
+                <button class="nav-button" onclick="location.href='filter.html'; navToggle(this)" style="width: 100%"><span class="label">Filter Local Venues</span></button>
+                <button class="nav-button" onclick="getLocation('map.html'); navToggle(this)" style="width: 100%"><span class="label">View Local Venues</span></button>
+                <button class="nav-button active" onclick="navToggle(this)" style="width: 100%"><span class="label">Plan A Crawl</span></button>
             </nav>
             <main>
 

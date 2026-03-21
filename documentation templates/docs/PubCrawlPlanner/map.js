@@ -21,11 +21,11 @@ var lon = urlParams.get('lon') || -2.5879;
 // see: https://leafletjs.com/examples/quick-start/
 
 // L for Leaflet - initialize the map centred on user or Bristol, zoom level 13
-var map = L.map('map').setView([lat,lon], 13);
+    var map = L.map('map').setView([lat,lon], 13);
 
-// attribution legally required by the OpenStreetMap license
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
+    // attribution legally required by the OpenStreetMap license
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
 
 mapQuery();

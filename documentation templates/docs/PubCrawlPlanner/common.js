@@ -1,6 +1,12 @@
-function setColumnActive(button) {
-    document.querySelectorAll('.nav-column .nav-button').forEach(btn => btn.classList.remove('active'));
-    button.classList.add('active');
+function navToggle(button) {
+    if (!button.classList.contains('active')) {
+        document.querySelectorAll('.nav-column .nav-button').forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+    } else {
+        document.querySelectorAll('.nav-column .nav-button').forEach(btn => btn.classList.remove('active'));
+        location.href = 'index.html';
+    }
+
 }
 
 // Request user geolocation and callback with lat, lon
