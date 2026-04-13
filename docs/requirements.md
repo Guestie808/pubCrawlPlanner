@@ -15,8 +15,6 @@ TODO: Write brief user stories to explain how various actors would interact with
 - As someone who has lived in Bristol for 10+ years, I want to be able to make going out more fun by having activities to do on my pub crawl so that friends are more willing to come out and so nights out are more fun and interesting.
 
 ### Actors
-TODO: List and describe the actors/users for this product.
-
 - Businesses (Bars, Pubs, Nightclubs): Businesses that will be included in the dataset and so will have an interest in the app as it can provide information about common pub crawl routes
     - View total number of times their venue has been included in generated crawl routes to help analyse business footfall
     - Update/ amend information displayed about their business on the site specifically (not Bristol database info) to keep users up to date on general business info, events and live music, and more
