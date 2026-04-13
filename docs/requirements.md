@@ -129,9 +129,6 @@ TODO: List and describe the actors/users for this product.
 | **Non-functional** | Should run on a variety of devices and browsers |
 | **Issues** | There may be arguments over whether a challenge was completed, repeated challenges may reduce enjoyment |
 
-
-TODO: Your Use-Case diagram should include all use-cases.
-
 ![Insert your Use-Case Diagram Here](images/use-case.png)
 
 ## Software Requirements Specification
@@ -149,10 +146,6 @@ TODO: create a list of functional requirements.
     FR4 - The system shall allow admins to approve/ create logins for requesting businesses. - UC4
     FR5 - The system shall store user login info - UC4, UC5
 
-    | Connor |
-
-    FR1 - 
-
 ### Non-Functional Requirements
 TODO: Consider one or more [quality attributes](https://en.wikipedia.org/wiki/ISO/IEC_9126) to suggest a small number of non-functional requirements.
 Give each non-functional requirement a unique ID. e.g. NFR1, NFR2, ...
@@ -164,5 +157,3 @@ Indicate which UC the requirement comes from.
     NFR1 - Accuracy: The system should store and provide accurate readings on venue statistics to businesses. - UC1
     NFR2 - Usability: The system should have an easy to use interface for businesses and admins to access information. - UC1, UC3
     NFR3 - Installability: The system should allow for easy business account setup by admins. - UC4
-
-    | Connor |
