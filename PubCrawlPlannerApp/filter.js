@@ -49,7 +49,7 @@ function query() { // shows all items
 
 function search(searchTerm) { // shows items with partial match to search input
     let enc = encodeURIComponent(searchTerm);
-    let url = `https://maps2.bristol.gov.uk/server2/rest/services/ext/ll_leisure_and_culture/MapServer/14/query?where=&text=${enc}&outFields=*&f=json`;
+    let url = `https://maps2.bristol.gov.uk/server2/rest/services/ext/ll_leisure_and_culture/MapServer/14/query?where=&text=${enc}&outFields=MAPEAST,MAPNORTH,TYPE_OF_PREMISE,TRADING_NAME,TRADING_ADDRESS,BUSINESS_CONTACT&outSR=4326&f=json`;
     fetch(url).then(r=>r.json()).then(outputTable);
     document.querySelectorAll('.nav-bar .nav-button').forEach(btn => btn.classList.remove('active'));
 }
