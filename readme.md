@@ -17,7 +17,7 @@ MiniPixel (GomePixel - font used in "Filter Local Venues" table) - link: https:/
 5. [Testing](docs/testing.md)
 
 ## Website (Hosted through Github Pages)
-https://guestie808.github.io/PubQuest/
+https://guestie808.github.io/PubQuestLive/
 
 ## How to use
 
