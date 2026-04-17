@@ -3,9 +3,6 @@
 ## User Needs
 
 ### User stories
-TODO: Write brief user stories to explain how various actors would interact with the system to accomplish a goal.
-    Express these in the form from agile development:- As a (role) I want (goal) so that (benefit).
-
 - As a bar/ nightclub/ pub business in Bristol, I want to be able to view and analyse route data involving the business so that I can make changes to my strategies based on the data so that I can attract more customers and maintain a larger customer base.
 
 - As an admin/ engineer of the app, I want to be able to manage all information stored behind the scenes, including viewing, changing, adding and deleting data, so that the app stays up to date, and so that businesses can setup their user accounts through my confirmation.
@@ -15,8 +12,7 @@ TODO: Write brief user stories to explain how various actors would interact with
 - As someone who has lived in Bristol for 10+ years, I want to be able to make going out more fun by having activities to do on my pub crawl so that friends are more willing to come out and so nights out are more fun and interesting.
 
 ### Actors
-TODO: List and describe the actors/users for this product.
-
+| Tyler |
 - Businesses (Bars, Pubs, Nightclubs): Businesses that will be included in the dataset and so will have an interest in the app as it can provide information about common pub crawl routes
     - View total number of times their venue has been included in generated crawl routes to help analyse business footfall
     - Update/ amend information displayed about their business on the site specifically (not Bristol database info) to keep users up to date on general business info, events and live music, and more
@@ -28,6 +24,7 @@ TODO: List and describe the actors/users for this product.
     - View in depth details of each location
     - Setup business accounts so that they can access the necessary features
 
+| Connor |
 - New Bristol Residents: people who have recently moved to Bristol, with a high majority being students
     - View pubs, nightclubs and bars in the area
     - Create a pub crawl route for the night out
@@ -38,26 +35,15 @@ TODO: List and describe the actors/users for this product.
     - View pubs, nightclubs and bars in the area
 
 ### Use Cases
-
-| TODO: USE-CASE ID e.g. UC1, UC2, ... | TODO: USE-CASE NAME | 
-| -------------------------------------- | ------------------- |
-| **Description** | TODO: Goal to be achieved by use case and sources for requirement |
-| **Actors** | TODO: List of actors involved in use case |
-| **Assumptions** | TODO: Pre/post-conditions if any |
-| **Steps** | TODO: Interactions between actors and system necessary to achieve goal |
-| **Variations** | TODO: OPTIONAL - Any variations in the steps of a use case |
-| **Non-functional** | TODO: OPTIONAL - List of non-functional requirements that the use case must meet. |
-| **Issues** | TODO: OPTIONAL - List of issues that remain to be resolved |
-
 | USE-CASE 1 | Business Stat Analysis - Tyler |
 | -------------------------------------- | ------------------- |
 | **Description** | View total times a venue has been used in a crawl |
 | **Actors** | Businesses, Admins/ Engineers |
 | **Assumptions** | Business/ Admin has login setup to access data |
 | **Steps** | 1. Get business data from venue database; 2. View statistics page |
-| **Variations** | 1. Not logged into a business account |
+| **Variations** | Not logged into a business account |
 | **Non-functional** | Should run on a variety of devices and browsers |
-| **Issues** |  |
+| **Issues** | Could collect inaccurate statistics if user reloads page, goes back and forwards between pages etc. |
 
 | USE-CASE 2 | Business Info Update - Tyler | 
 | -------------------------------------- | ------------------- |
@@ -65,9 +51,9 @@ TODO: List and describe the actors/users for this product.
 | **Actors** | Businesses, Admins/ Engineers |
 | **Assumptions** | Business/ Admin has login setup to access data |
 | **Steps** | 1. Get business data from venue database; 2. View statistics page; 3. Accept user input; 4. Append data to venue database |
-| **Variations** |  |
+| **Variations** | Not logged into a business account |
 | **Non-functional** | Should run on a variety of devices and browsers |
-| **Issues** |  |
+| **Issues** | Would not be able to change data sourced from OpenData Bristol dataset |
 
 | USE-CASE 3 | App Usage Stats - Tyler |
 | -------------------------------------- | ------------------- |
@@ -75,9 +61,9 @@ TODO: List and describe the actors/users for this product.
 | **Actors** | Admins/ Engineers |
 | **Assumptions** | Admin has login setup to access data |
 | **Steps** | 1. Get usage data from venues database; 2. View statistics page |
-| **Variations** | 1. Not logged into an admin account |
+| **Variations** | Not logged into an admin account |
 | **Non-functional** | Should run on a variety of devices and browsers |
-| **Issues** |  |
+| **Issues** | Could collect inaccurate statistics if user reloads page, goes back and forwards between pages etc. |
 
 | USE-CASE 4 | Business Account Setup - Tyler |
 | -------------------------------------- | ------------------- |
@@ -85,13 +71,13 @@ TODO: List and describe the actors/users for this product.
 | **Actors** | Businesses, Admins/ Engineers |
 | **Assumptions** | Admin has login setup to access data; Each business already has unique login generated and stored in a database, waiting to be activated on businesses request |
 | **Steps** | 1. Get searched business' login info from login database; 2. View single-use login credentials |
-| **Variations** | 1. Business is not found in database (could be new) |
+| **Variations** |  Business is not found in database (could be new) |
 | **Non-functional** | Should run on a variety of devices and browsers |
 | **Issues** | Relies on admin to complete setup which could delay account being sorted |
 
 | USE-CASE 5 | Create User Login - Connor |
 | -------------------------------------- | ------------------- |
-| **Description** | How new users can create a their own account to loign. this can be used to access personalised features for their pub crawls. Some examples include: saving routes, showing a history of past pub crawls/routes  |
+| **Description** | How new users can create a their own account to login. This can be used to access *personalised* features for their pub crawls. Some examples include: saving routes, showing a history of past pub crawls/routes. They would *not* need a login to access all base features of the site, it would only give access to more personalised features |
 | **Actors** | Exsisting Bristol residents and new Bristol residents |
 | **Assumptions** | 1.The servers are online and can easily store new users and their data securely 2.Users can easily access login page 3. the user has a valid email address |
 | **Steps** |  1. User goes to 'Sign up' page to make an account 2. The user enters the details that the system requires like email and password 3. The system checks if the email has already been used  4. The system stores the users credentials in the database, confirming account creation  5. The user can now login |
@@ -129,39 +115,24 @@ TODO: List and describe the actors/users for this product.
 | **Non-functional** | Should run on a variety of devices and browsers |
 | **Issues** | There may be arguments over whether a challenge was completed, repeated challenges may reduce enjoyment |
 
-
-TODO: Your Use-Case diagram should include all use-cases.
-
-![Insert your Use-Case Diagram Here](images/use-case.png)
+!images/use-case.png
 
 ## Software Requirements Specification
+
 ### Functional requirements
-TODO: create a list of functional requirements. 
-    e.g. "The system shall ..."
-    Give each functional requirement a unique ID. e.g. FR1, FR2, ...
-    Indicate which UC the requirement comes from.
-
     | Tyler |
-
-    FR1 - The system shall store venue statistics and allow for later access by businesses. - UC1
-    FR2 - The system shall allow businesses to access and update their information on the site. - UC2
-    FR3 - The system shall store app usage statistics and allow for later access by admins. - UC3
-    FR4 - The system shall allow admins to approve/ create logins for requesting businesses. - UC4
-    FR5 - The system shall store user login info - UC4, UC5
+    FR1 - The system shall allow venue statistics to be accessed by businesses. - UC1
+    FR2 - The system shall allow businesses to update their information on the site. - UC2
+    FR3 - The system shall store app usage statistics. - UC3
+    FR4 - The system shall allow admins to access app usage statistics. - UC3
+    FR5 - The system shall allow admins to approve/ create logins for requesting businesses. - UC4
+    FR6 - The system shall store user login info - UC4, UC5
 
     | Connor |
 
-    FR1 - 
-
 ### Non-Functional Requirements
-TODO: Consider one or more [quality attributes](https://en.wikipedia.org/wiki/ISO/IEC_9126) to suggest a small number of non-functional requirements.
-Give each non-functional requirement a unique ID. e.g. NFR1, NFR2, ...
-
-Indicate which UC the requirement comes from.
-
     | Tyler |
-
-    NFR1 - Accuracy: The system should store and provide accurate readings on venue statistics to businesses. - UC1
+    NFR1 - Accuracy: The system should provide accurate readings on venue statistics to businesses. - UC1
     NFR2 - Usability: The system should have an easy to use interface for businesses and admins to access information. - UC1, UC3
     NFR3 - Installability: The system should allow for easy business account setup by admins. - UC4
 

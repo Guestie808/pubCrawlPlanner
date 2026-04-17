@@ -1,8 +1,7 @@
 # Project Proposal
-Pub Crawl Planner
+Pub Quest - a pub crawl planner
 
 ## Business Case
-
 
 ### Problem statement
 - Our app aims to provide young to middle-aged adults, especially those new to Bristol, with a tool to discover new pubs and nightclubs in their general area, 
@@ -10,7 +9,7 @@ or all across the city. This will help solve the problem that many new residents
 which can make it exceptionally hard to plan nights out with friends or family. However, not only will our web based application aid newcomers to Bristol, 
 it can also benefit users who are familiar with the city. The secondary problem we attempt to solve is the lack of activities that can be carried out on a 
 pub crawl/ night out, in turn potentially making the meeting fairly boring. By implementing some sort of pub crawl activity planner, this problem can be quite 
-easily tackled.
+easily tackled. We will use Bristol Open Data's "Pubs and Nightclubs" dataset to get all the data we need for this project.
 
 ### Business benefits
 - Provides easier way to organise a night out, encouraging exploration of local areas, espeicially to people new to the city.
@@ -70,8 +69,7 @@ easily tackled.
 - Login information must be secure, if not data could be prone to breach
 - Data (such as route data, personal info, etc) must be given permission to be stored/ shared with businesses as if not, it could breach data protection act
 
-## Project Scope // should be clear and include all relevant actors
-TODO: Scope of the System of Interest. Include a bullet list of things from your context diagram that are in scope.
+## Project Scope
 
 - OpenData Bristol Platform
 - App Hosting
@@ -85,4 +83,4 @@ TODO: Scope of the System of Interest. Include a bullet list of things from your
 - Acitivity Generator
 - Admins/ Engineers
 
-![Insert your Context Diagram Here](images/context.png)
+!images/context.png
