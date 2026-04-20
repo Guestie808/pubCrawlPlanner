@@ -9,7 +9,7 @@ Create a requirements traceability matrix to validate the completeness of the pr
 
 | Use-Case ID | Requirement ID | Test Case | Status |
 | ----------- | -------------- | --------- | ------ |
-| UC1 | FR1 | .html | Fail | 
+| UC1 | FR1 | filter.html | Pass | 
 | UC1 | NFR1 | filter.html | Pass | 
 | UC1, UC3 | NFR2 | filter.html | Pass | 
 | UC2 | FR2 | filter.html | Fail | 
@@ -19,12 +19,9 @@ Create a requirements traceability matrix to validate the completeness of the pr
 | UC4, UC5 | FR6 | index.html | Fail | 
 | UC4 | NFR3 | index.html | Fail |
 | UC5 | NFR4 | index.html | Fail | 
-| UC6 | FR7 | index.html | Fail |
+| UC6 | FR7 | map.html | Fail |
 | UC6, UC7, UC8 | NFR5 | index.html | Fail | 
 | UC7 | FR8 | index.html | Fail |
 | UC8 | FR9 | index.html | Fail | 
 | UC9 | FR10 | index.html | Fail |
-| UC5, UC6, UC7, UC8 | NFR6 | index.html | Fail | 
-
-
-TODO: Add rows for each test, current status is eg. pass/fail
+| UC5, UC6, UC7, UC8 | NFR6 | map.html | Pass | 
