@@ -99,10 +99,30 @@ All results - https://maps2.bristol.gov.uk/server2/rest/services/ext/ll_leisure_
 
 Results with any field with SIMILAIR match to search input - https://maps2.bristol.gov.uk/server2/rest/services/ext/ll_leisure_and_culture/MapServer/14/query?where=&text=${enc}&outFields=MAPEAST,MAPNORTH,TYPE_OF_PREMISE,TRADING_NAME,TRADING_ADDRESS,BUSINESS_CONTACT&outSR=4326&f=json
 
-![Diagram](images/exactClass.png)
-![Diagram](images/likeClass.png)
-![Diagram](images/allClass.png)
-![Diagram](images/searchClass.png)
+![exactClass](images/exactClass.png)
+![likeClass](images/likeClass.png)
+![allClass](images/allClass.png)
+![searchClass](images/searchClass.png)
 
 # User guide
-TODO: Explain how each use-case works by providing step-by-step screenshots for each use-case. This should be based on a tested scenario.
+Due to the fact multiple features were cut, only use case 6 was actually met, as described in the following guide. Although this was the case, other necessary features that were not initially specified in the breif were included in the current finished version of the website.
+
+![index](images/index.png)
+This is the first page the user will see when they load the website. It is currently empty content-wise, but has a number of buttons that allow the user to navigate the site.
+
+![filter](images/filter.png)
+By clicking on the "Filter Local Venues" button, the user is redirected to the "Filter" page, in which all venues are displayed in a table. This page checks off the only use case we could meet in this project, that being use case 6. The user then has 4 options to choose from in terms of filtering the local venues, displayed just above the table: "Cafe Bars", "Nightclubs", "Pubs", and "Wine Bars". Pressing the "Filter Local Venues" button again will redirect the user back to the home screen/ "index".
+
+![filtered](images/filtered.png)
+Here is an example of what will show when the user presses one of the filter buttons, in this case, the "Cafe Bars" filter. The table will reload to show only records that are "Cafe Bars". The user can press any of the other 3 buttons to change which venue type they would like to see, or they can press the same button again to remove the currently applied filter, showing all records once again.
+
+![search](images/search.png)
+In the top right hand corner of the page is a search bar and button, which tie into the functionality of the "Filter" page. If the user enters a value into the search bar and presses the search button, the table will reload and display all records that contain the value typed in by the user. In this example, "vil" is used, and therefore "*Vil*lager" and "Ash*vil*le" are both displayed. The user can use the search page on whichever page they please. Once they press the search button, they will automatically be redirected to the "Filter" page with the correct records being shown in the table. By pressing the search button again without a value inside the search bar, all results will be shown in the table.
+
+![map](images/map.png)
+![location](images/location.png)
+![pin](images/pin.png)
+Moving on, pressing the "View Local Venues" button will load up a map of Bristol, populated with a large number of pins. The first time the button is pressed, the user will be prompted to allow location services. If they allow, the center of the map will be the users current position, however, if not, the map will center on the center of Bristol. The user can zoom and pan around the map, and click on pins to see extra information. This page also fulfils use case 6. Again, pressing the currently selected button (in this case "View Local Venues"), the user will be redirected back to the home page.
+
+![plan](images/plan.png)
+The final page the user can access through the navigation menu is the "Plan" page through the "Plan A Crawl" button. This page is also blank due to the cut features, but is setup ready for when the features are implemented. Pressing the same button again will take the user back to the home page
