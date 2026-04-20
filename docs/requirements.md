@@ -129,6 +129,11 @@
     FR6 - The system shall store user login info - UC4, UC5
 
     | Connor |
+    FR7 - The system shall allow users to input a current or desired location and display a list or map of nearby venues and its information. - UC6
+    FR8 - The system shall allow users to generate a pub crawl route based on their selected preferences and starting location. - UC7
+    FR9 - The system shall allow users to enable an activity generator that assigns challenges and forfeits to each venue in a generated pub crawl. - UC8
+    FR10 - The system shall allow the user to mark the challenge and/or forfeit as completed or failed. - UC8
+    
 
 ### Non-Functional Requirements
     | Tyler |
@@ -137,3 +142,6 @@
     NFR3 - Installability: The system should allow for easy business account setup by admins. - UC4
 
     | Connor |
+    NFR4 – Performance: The system shall generate pub crawl routes, venue listings, and activities within 2–3 seconds under normal conditions. – UC6, UC7, UC8
+    NFR5 – Security: The system shall securely store user credentials and personal data using encryption and protect against unauthorised access. – UC5
+    NFR6 – Availability: The system shall be accessible and operational at least 99% of the time, ensuring users can access features such as venue viewing and route generation when needed. – UC5, UC6, UC7, UC8
