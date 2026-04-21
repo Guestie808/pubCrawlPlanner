@@ -86,7 +86,7 @@ TODO: provide a table listing the number of jslint warnings/reports for each mod
 ## Software Architecture
 TODO: Describe the major components of your architecture. Are any particular architectural styles being used?
 
-!images/component.png
+![SoftwareArchitecture]/(images/architecture.png)
 
 ## Bristol Open Data API
 All APIs return the following fields: MAPEAST, MAPNORTH, TYPE_OF_PREMISE, TRADING_NAME, TRADING_ADDRESS, BUSINESS_CONTACT
@@ -99,10 +99,7 @@ All results - https://maps2.bristol.gov.uk/server2/rest/services/ext/ll_leisure_
 
 Results with any field with SIMILAIR match to search input - https://maps2.bristol.gov.uk/server2/rest/services/ext/ll_leisure_and_culture/MapServer/14/query?where=&text=${enc}&outFields=MAPEAST,MAPNORTH,TYPE_OF_PREMISE,TRADING_NAME,TRADING_ADDRESS,BUSINESS_CONTACT&outSR=4326&f=json
 
-![exactClass](images/exactClass.png)
-![likeClass](images/likeClass.png)
-![allClass](images/allClass.png)
-![searchClass](images/searchClass.png)
+![classDiagram](images/classDiagram.png)
 
 # User guide
 Due to the fact multiple features were cut, only use case 6 was actually met, as described in the following guide. Although this was the case, other necessary features that were not initially specified in the breif were included in the current finished version of the website.
